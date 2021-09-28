@@ -1,0 +1,31 @@
+{% extends 'base.html' %} {% block title %}
+BRACU CGPA Calculator
+{% endblock %} {% block body %}
+
+
+<div class="align-items-center">
+<br>
+<br>
+<form action="/courses" method="POST">
+<h1 class="display-6"> Current CGPA (Before This Semester): </h1>
+   <input type="text" class="form-control" name="cgpa" id="cgpa"></input>
+<br>
+<h1 class="display-6"> Number of Courses completed <br> (Before This Semester): </h1>
+<p>Hint: Courses = Credit/3 (If you can remember your credit)</p>
+   <input type="number" class="form-control" name="credits" id="credits"></input>
+<br>
+<h1 class="display-6"> Number of Courses in This Semester: </h1>
+<select class="form-select" aria-label="No of courses" name="coursecount" id="coursecount">
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option selected value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+</select>
+<br>
+    <input type="submit"  class="btn btn-primary" id = "submit1" value="Submit">
+</form>
+
+</div>
+
+{% endblock %}
